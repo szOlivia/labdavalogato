@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/labdavalogato', function(){
     return view("labdavalogato");
 });
+
+Route::get('/kezdo_oldal', function(){
+    return view("kezdo_oldal");
+});
