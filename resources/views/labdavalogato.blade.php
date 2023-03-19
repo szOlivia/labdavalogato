@@ -12,21 +12,21 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
-    <h1 class="p-5 text-center">Labda szín válogató</h1>
+<body style="background-image: url({{URL('./img/labdavalogatohatter.jpg')}})"> 
+    <h1 class="p-5 fw-bold text-center text-white">Labda szín válogató</h1>
     <form class="row g-12" >
         <div class="container-fluid text-center">
             <div class="row gx-3 gy-2 align-items-center">
          
                 <div class="col-sm-3">
                     <div class="ps-5">
-                        <label> Hány labdát szeretne válogatni?</label>
+                        <label class="text-white"> Hány labdát szeretne válogatni?</label>
                         <input type="number" class="form-control" name="db" id="db" min="1" max="6" placeholder="1-től 6-ig írjon be egy számot">
                     </div>
                 </div>
                 
                 <div class="col-sm-3">
-                    <label >Melyik színból szeretne legalabb 1db-ot?</label>
+                    <label class="text-white" >Melyik színból szeretne legalabb 1db-ot?</label>
                     <select class="form-select"  id="inlineFormSelectPref">
                     <option selected> Labda színek:</option>
                     <option value="piros">Piros</option>
@@ -41,16 +41,16 @@
         <div class="container-fluid ">
             <div class="row gx-3 gy-2 align-items-center">
                 <div class="col-sm-3">
-                    <label>Addig menjen a folyamat, ameddig ki nem gurul az a színű labda, amit kiválasztott?</label> 
+                    <label class="text-white">Addig menjen a folyamat, ameddig ki nem gurul az a színű labda, amit kiválasztott?</label> 
                     <br>
                     <div class="form-check">
                     <input class="form-check-input" type="radio" name="i_n" id="i_n1">
-                    <label class="form-check-label" for="i_n1"> Igen <br>
+                    <label class="form-check-label text-white" for="i_n1"> Igen <br>
                     </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="i_n" id="i_n2">
-                    <label class="form-check-label" for="i_n2"> Nem <br>
+                    <label class="form-check-label text-white" for="i_n2"> Nem <br>
                     </label>
                 </div>
                     <br> 
@@ -59,7 +59,7 @@
 
                 
                 <div class="col-sm-3">
-                <button type="submit" class="btn btn-primary">Beküldés</button>
+                <button type="submit" class="btn btn-primary btn-lg">Beküldés</button>
                 </div>
             </div>
         </div>

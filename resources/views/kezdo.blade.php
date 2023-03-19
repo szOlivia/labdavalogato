@@ -16,10 +16,14 @@
 <body style="background-image: url({{URL('./img/kezdohatter.jpg')}})">
     
     <h1 class="p-5 text-success ">.</h1>
+    <div class="row col-md-6"></div>
     <p class="p-5 fs-1 text-white fw-bold">Válogassunk labda színeket!</p>
     <div class="ps-5">
-         <a class="btn btn-primary"  href="./labdavalogato">Tovább a szín válogághoz</a> 
+        <div class="col-3 auto">
+         <a class="btn btn-primary btn-lg"  href="./labdavalogato">Tovább a szín válogatásához</a>
+        </div>
     </div>
+</div>
     
 </body>
 </html>
