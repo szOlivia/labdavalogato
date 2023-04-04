@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\szinController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,6 @@ Route::get('/labdavalogato', function(){
 Route::get('/', function(){
     return view("kezdo");
 });
+
+
+Route::post("/szinMentes",[szinController::class,"mentes"]);
