@@ -23,5 +23,8 @@ Route::get('/', function(){
     return view("kezdo");
 });
 
+Route::get('/szinadatbazis', function(){
+    return view("szinadatbazis");
+});
 
 Route::post("/szinMentes",[szinController::class,"mentes"]);
