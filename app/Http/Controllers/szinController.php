@@ -8,10 +8,15 @@ use Illuminate\Http\Request;
 
 class szinController extends Controller
 {
-    public function mentes(Request $req){
 
+    public function adatbazis(){
+        
         $labdaszin = DB::select("SELECT * FROM labadszin");
         return view("szinadatbazis",["ladbaszin"=> $labdaszin]);
+
+    }
+
+    public function mentes(Request $req){
 
         $r = $req->r;
         $g = $req->g;

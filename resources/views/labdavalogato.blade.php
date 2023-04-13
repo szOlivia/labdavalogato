@@ -14,19 +14,28 @@
 </head>
 <body style="background-image: url({{URL('./img/labdavalogatohatter.jpg')}})"> 
     <h1 class="p-5 fw-bold text-center text-white">Labda szín válogató</h1>
-    <form class="row g-12" >
-        <div class="container-fluid text-center">
-            <div class="row gx-3 gy-2 align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <form method="POST">
+    {{-- <form class="row g-12" > --}}
+        {{-- <div class="container-fluid text-center"> --}}
+            {{-- <div class="row gx-3 gy-2 align-items-center"> --}}
          
-                <div class="col-sm-3">
-                    <div class="ps-5">
-                        <label class="text-white"> Hány labdát szeretne válogatni?</label>
+                {{-- <div class="col-sm-3"> --}}
+                    {{-- <div class="ps-5"> --}}
+                     @csrf
+                    <div class="my-3">
+                        <label class="text-white container-md fw-bold"> Hány labdát szeretne válogatni?</label>
                         <input type="number" class="form-control" name="db" id="db" min="1" max="6" placeholder="1-től 6-ig írjon be egy számot">
                     </div>
                 </div>
                 
-                <div class="col-sm-3">
-                    <label class="text-white" >Melyik színból szeretne legalabb 1db-ot?</label>
+                {{-- <div class="col-sm-3"> --}}
+                    @csrf
+                    <div class="col-6">
+                    <div class="my-3">
+                    <label class="text-white container-md fw-bold" >Melyik színból szeretne legalabb 1db-ot?</label>
                     <select class="form-select"  id="inlineFormSelectPref">
                     <option selected> Labda színek:</option>
                     <option value="piros">Piros</option>
@@ -37,30 +46,43 @@
             </div>
         </div>
 
-    
-        <div class="container-fluid ">
-            <div class="row gx-3 gy-2 align-items-center">
-                <div class="col-sm-3">
-                    <label class="text-white">Addig menjen a folyamat, ameddig ki nem gurul az a színű labda, amit kiválasztott?</label> 
-                    <br>
+            <br>
+
+        <div class="container">
+            {{-- <div class="row gx-3 gy-2 align-items-center"> --}}
+                {{-- <div class="col-sm-3"> --}}
+                    @csrf
+                <div class="col-12">
+                
+                    <label class="text-white container-md fw-bold">Addig menjen a folyamat, ameddig ki nem gurul az a színű labda, amit kiválasztott?</label> 
+                    <br> 
+                    <div class="p-2">
                     <div class="form-check">
-                    <input class="form-check-input" type="radio" name="i_n" id="i_n1">
+                    <input class="form-check-input bg-primary" type="radio" name="i_n" id="i_n1">
                     <label class="form-check-label text-white" for="i_n1"> Igen <br>
                     </label>
                 </div>
+                </div>
+
+                <div class="p-2">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="i_n" id="i_n2">
+                    <input class="form-check-input bg-primary" type="radio" name="i_n" id="i_n2">
                     <label class="form-check-label text-white" for="i_n2"> Nem <br>
                     </label>
+                </div>
                 </div>
                     <br> 
                 </div>
 
+                <br><br>
 
-                
-                <div class="col-sm-3">
-                <button type="submit" class="btn btn-primary btn-lg">Beküldés</button>
-                </div>
+                <div class="row justify-content-md-center">
+                    <div class="col-md-4 text-center">
+                      <button type="submit" class="btn btn-primary btn-lg mx-auto btn-success">Beküldés</button>
+                    </div>
+                  </div>
+
+               
             </div>
         </div>
     </form>
